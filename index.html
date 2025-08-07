@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Rock Paper Scissors - Ultimate Edition</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div class="game-container">
+        <header>
+            <h1>Rock Paper Scissors</h1>
+            <div class="game-mode">
+                <button id="classic-mode" class="active">Classic</button>
+                <button id="extended-mode">Extended</button>
+            </div>
+        </header>
+        
+        <div class="game-area">
+            <div class="score-board">
+                <div id="user-label" class="badge">
+                    <i class="fas fa-user"></i> Player
+                </div>
+                <div id="computer-label" class="badge">
+                    <i class="fas fa-robot"></i> Computer
+                </div>
+                <span id="user-score">0</span>
+                <span class="separator">:</span>
+                <span id="computer-score">0</span>
+                <div class="round-counter">Round: <span id="round-number">1</span></div>
+            </div>
+            
+            <div class="result">
+                <p>Choose your weapon to begin!</p>
+            </div>
+            
+            <div class="choices">
+                <div id="rock" class="choice" title="Rock">
+                    <i class="fas fa-hand-rock"></i>
+                </div>
+                <div id="paper" class="choice" title="Paper">
+                    <i class="fas fa-hand-paper"></i>
+                </div>
+                <div id="scissors" class="choice" title="Scissors">
+                    <i class="fas fa-hand-scissors"></i>
+                </div>
+                <div id="lizard" class="choice extended" title="Lizard">
+                    <i class="fas fa-hand-lizard"></i>
+                </div>
+                <div id="spock" class="choice extended" title="Spock">
+                    <i class="fas fa-hand-spock"></i>
+                </div>
+            </div>
+            
+            <div class="battle-area">
+                <div class="player-choice">
+                    <div class="placeholder"><i class="fas fa-question"></i></div>
+                </div>
+                <div class="vs-circle">VS</div>
+                <div class="computer-choice">
+                    <div class="placeholder"><i class="fas fa-question"></i></div>
+                </div>
+            </div>
+            
+            <p id="action-message">Make your move!</p>
+            
+            <div class="game-controls">
+                <button id="reset-btn"><i class="fas fa-redo"></i> Reset Game</button>
+                <button id="how-to-play"><i class="fas fa-question-circle"></i> How to Play</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal" id="rules-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Game Rules</h2>
+            <div class="rules-content">
+                <h3>Classic Mode:</h3>
+                <ul>
+                    <li>Rock crushes Scissors</li>
+                    <li>Scissors cut Paper</li>
+                    <li>Paper covers Rock</li>
+                </ul>
+                <h3>Extended Mode (Rock-Paper-Scissors-Lizard-Spock):</h3>
+                <ul>
+                    <li>Scissors cut Paper</li>
+                    <li>Paper covers Rock</li>
+                    <li>Rock crushes Lizard</li>
+                    <li>Lizard poisons Spock</li>
+                    <li>Spock smashes Scissors</li>
+                    <li>Scissors decapitate Lizard</li>
+                    <li>Lizard eats Paper</li>
+                    <li>Paper disproves Spock</li>
+                    <li>Spock vaporizes Rock</li>
+                    <li>Rock crushes Scissors</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <script src="app.js" type="text/javascript"></script>
+</body>
+
+</html>
